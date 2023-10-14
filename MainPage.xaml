@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_App.MainPage"
+             BackgroundColor="AliceBlue">
+
+    <ScrollView>
+        <Grid
+            Padding="30,0"
+            RowSpacing="25"
+            VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Image -->
+            <Image Grid.Row="0"
+                   Source="dotnet_bot.png"
+                   SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                   HeightRequest="200"
+                   HorizontalOptions="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- Heading -->
+            <Label Grid.Row="1"
+                   Text="Institut Teknologi Sepuluh Nopember"
+                   SemanticProperties.HeadingLevel="Level1"
+                   FontSize="32"
+                   TextColor="DarkSlateBlue"
+                   HorizontalOptions="Center" />
+
+            <!-- Subheading -->
+            <Label Grid.Row="2"
+                   Text="Teknik Informatika"
+                   SemanticProperties.HeadingLevel="Level2"
+                   SemanticProperties.Description="Welcome to Teknik Informatika"
+                   FontSize="18"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Button -->
+            <Button Grid.Row="3"
+                    x:Name="CounterBtn"
+                    Text="Click me"
+                    BackgroundColor="LightSeaGreen"
+                    TextColor="White"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
